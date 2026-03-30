@@ -1,0 +1,391 @@
+/* ============================================================
+   FONTER — ändra här och bara här
+
+   1. Lägg till dina @font-face (eller @import för Google Fonts)
+   2. Skriv fontnamnet på rätt rad nedanför
+============================================================ */
+
+@font-face {
+  font-family: BigWiz;
+  src: url(assets/fonts/dos-font.otf);
+}
+@font-face {
+  font-family: Runey;
+  src: url(assets/fonts/runescape_bold.ttf);
+}
+@font-face {
+  font-family: Logo;
+  src: url(assets/fonts/OldWizard.ttf);
+}
+
+.footer-logo, .nav-logo,.nav-links{
+  font-family:Logo;
+}
+/* Rubriker (h1–h4, logotyp, citat) */
+h1, h2, h3, h4, .citatband blockquote {
+  font-family: Logo;       /* ← BYTA HÄR */
+}
+
+/* Allt annat (brödtext, nav, ingress, byline...) */
+body {
+  font-family: Runey;        /* ← BYTA HÄR */
+}
+
+/* ============================================================
+   Resten behöver du inte röra
+============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; font-family: inherit; }
+
+:root {
+  --vit:    #faf8f4;
+  --papper: #f2ede4;
+  --bläck:  #1a1610;
+  --grå:    #7a7068;
+  --linje:  #d8d0c4;
+  --accent: #8b3a2a;
+}
+
+html { font-size: 16px; }
+
+body {
+  background: var(--vit);
+  color: var(--bläck);
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  border-left: 1px solid var(--linje);
+  border-right: 1px solid var(--linje);
+}
+
+/* NAV */
+nav {
+  border-bottom: 1px solid var(--linje);
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  background: var(--vit);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-logo {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--bläck);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--grå);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--bläck); }
+
+/* HERO */
+.hero {
+  background: var(--papper);
+  border-bottom: 1px solid var(--linje);
+  padding: 80px 40px 72px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-kicker {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: clamp(36px, 4vw, 58px);
+  line-height: 1.08;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-ingress {
+  font-size: 18px;
+  line-height: 1.65;
+  color: #3a3530;
+  font-weight: 300;
+  margin-bottom: 28px;
+  max-width: 46ch;
+}
+
+.hero-meta {
+  font-size: 12px;
+  color: var(--grå);
+  letter-spacing: 0.05em;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.hero-meta::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.hero-bild {
+  background: var(--linje);
+  aspect-ratio: 4/3;
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-bild img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.bild-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #d8d0c4 0%, #c4b9ac 50%, #b8aa99 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ARTIKELGRID */
+.sektion {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 40px;
+}
+
+.sektion-rubrik {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--grå);
+  margin-bottom: 32px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--linje);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.sektion-rubrik a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 11px;
+}
+
+.artikelgrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 32px;
+}
+
+.artikel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.artikel-bild {
+  aspect-ratio: 3/2;
+  overflow: hidden;
+  border-radius: 2px;
+  margin-bottom: 4px;
+}
+
+.artikel-bild .bild-placeholder {
+  background: linear-gradient(135deg, #e0d8ce 0%, #ccc3b6 100%);
+}
+
+.artikel-kategori {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.artikel h3 {
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.artikel h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.artikel h3 a:hover { color: var(--accent); }
+
+.artikel-ingress {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #4a433c;
+  font-weight: 300;
+}
+
+.artikel-byline {
+  font-size: 12px;
+  color: var(--grå);
+  margin-top: auto;
+}
+
+.tvåkolumn {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  border-top: 1px solid var(--linje);
+  padding-top: 48px;
+  margin-top: 48px;
+}
+
+.stor-artikel h2 {
+  font-size: 36px;
+  line-height: 1.12;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.stor-artikel h2 a { color: inherit; text-decoration: none; }
+.stor-artikel h2 a:hover { color: var(--accent); }
+
+.stor-artikel .stor-ingress {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #3a3530;
+  font-weight: 300;
+  margin-bottom: 16px;
+}
+
+.stor-artikel .stor-bild {
+  aspect-ratio: 16/9;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.stor-artikel .bild-placeholder {
+  background: linear-gradient(120deg, #c8bfb2 0%, #b5a99a 100%);
+}
+
+.lista-artiklar {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-left: 1px solid var(--linje);
+  padding-left: 28px;
+}
+
+.lista-artikel {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--linje);
+}
+
+.lista-artikel:first-child { padding-top: 0; }
+
+.lista-artikel .kategori {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 5px;
+}
+
+.lista-artikel h4 {
+  font-size: 17px;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.lista-artikel h4 a { color: inherit; text-decoration: none; }
+.lista-artikel h4 a:hover { color: var(--accent); }
+
+.lista-artikel .byline {
+  font-size: 11px;
+  color: var(--grå);
+  margin-top: 6px;
+}
+
+.citatband {
+  background: var(--bläck);
+  color: var(--vit);
+  padding: 64px 40px;
+  text-align: center;
+}
+
+.citatband blockquote {
+  font-size: clamp(22px, 3vw, 36px);
+  line-height: 1.35;
+  font-style: italic;
+  font-weight: 400;
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+
+.citatband cite {
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #888;
+  font-style: normal;
+}
+
+footer {
+  border-top: 1px solid var(--linje);
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+footer p {
+  font-size: 12px;
+  color: var(--grå);
+}
+
+@media (max-width: 800px) {
+  nav { padding: 0 20px; }
+  .hero { grid-template-columns: 1fr; padding: 48px 20px; }
+  .artikelgrid { grid-template-columns: 1fr; }
+  .tvåkolumn { grid-template-columns: 1fr; }
+  .lista-artiklar { border-left: none; padding-left: 0; border-top: 1px solid var(--linje); padding-top: 24px; }
+  .sektion { padding: 40px 20px; }
+  footer { flex-direction: column; gap: 12px; text-align: center; padding: 32px 20px; }
+}

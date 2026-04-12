@@ -11,15 +11,20 @@
   src: url(assets/fonts/runescape_bold.ttf);
 }
 
+*{
+  box-sizing: border-box;
+}
+
 body {
   display: grid;
-  grid-template-rows: auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto;
   padding: 0;
   margin: 0;
   overflow-x: hidden;
   background-color: #0D0D0D;
   color: #F4B342;
-  gap:2rem;
+  row-gap:2rem;
+  width:100%;
 }
 
 header {
@@ -121,4 +126,78 @@ header div a:last-child {
 .review img {
   /* width:10rem; */
   height:7rem;
+}
+
+
+#new-arrivals {
+  padding: 2rem;
+}
+
+#new-arrivals h2 {
+  font-family: Logo;
+  font-size: 2rem;
+  color: #F4B342;
+  margin-bottom: 1rem;
+}
+
+#product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.product-card {
+  background-color: #230255;
+  border: 0.1rem solid #8F0177;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  font-family: Logo;
+  font-size: 1.2rem;
+  color: #F4B342;
+  margin: 0.5rem 0;
+}
+
+.product-card p {
+  font-family: BigWiz;
+  font-size: 1rem;
+  color: #F4B342;
+  margin: 0.3rem 0;
+}
+
+.price {
+  color: #DE1A58 !important;
+  font-size: 1.2rem !important;
+}
+
+.product-card button {
+  margin-top: auto;
+  padding: 0.5rem 1rem;
+  background-color: #DE1A58;
+  color: #F4B342;
+  border: none;
+  font-family: BigWiz;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background-color: #8F0177;
+}
+
+footer {
+  display:flex;
+  justify-content: center;
+  border:0.1rem solid #F4B342;
 }

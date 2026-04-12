@@ -7,31 +7,69 @@
   src: url(assets/fonts/OldWizard.ttf);
 }
 
-body{
-  display:grid;
-  padding:0;
-  margin:0;
+body {
+  display: grid;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  background-color: #0D0D0D;
+  color: #F4B342;
+}
 
-}
-nav{
-  display:flex;
-  font-family:BigWiz;
-  font-size:1.5rem;
-  justify-content: space-evenly;
+header {
+  display: flex;
   align-items: center;
-  border-style:solid;
-  border-width:0.2rem;
-  width:100%;
-  padding: 0.1rem 2rem;
+  justify-content: space-between;
+  border-bottom: 0.2rem solid #8F0177;
+  padding: 0.5rem 1rem;
+  background-color: #230255;
 }
-nav a{
+
+#logo {
+  height: 5rem;
+  width: auto;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+}
+
+header div a {
+  font-size: 1.5rem;
   text-decoration: none;
+  padding: 0.5rem;
+  color: #F4B342;
 }
-main{
-  display:grid
-  
+
+header div a:last-child {
+  font-size: 2rem;
 }
-#logo{
-  width:5rem;
-  object-fit: contain;
+
+#myLinks {
+  display: none;
+  position: absolute;
+  top: 6.2rem;
+  right: 0;
+  background-color: #360185;
+  border-left: 0.2rem solid #8F0177;
+  border-bottom: 0.2rem solid #8F0177;
+}
+
+#myLinks a {
+  display: block;
+  font-family: BigWiz;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 1rem;
+  color: #F4B342;
+}
+
+#myLinks a:hover {
+  color: #DE1A58;
+}
+
+#checkout {
+  width: 3rem;
+  height: auto;
 }

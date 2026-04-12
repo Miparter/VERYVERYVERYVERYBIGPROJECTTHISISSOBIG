@@ -9,6 +9,7 @@
 
 body {
   display: grid;
+  grid-template-rows: auto auto auto auto auto;
   padding: 0;
   margin: 0;
   overflow-x: hidden;
@@ -23,10 +24,12 @@ header {
   border-bottom: 0.2rem solid #8F0177;
   padding: 0.5rem 1rem;
   background-color: #230255;
+  position:sticky;
+  top:0;
 }
 
 #logo {
-  height: 5rem;
+  height: 8rem;
   width: auto;
 }
 
@@ -43,7 +46,7 @@ header div a {
 }
 
 header div a:last-child {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 #myLinks {
@@ -59,9 +62,9 @@ header div a:last-child {
 #myLinks a {
   display: block;
   font-family: BigWiz;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-decoration: none;
-  padding: 1rem;
+  padding: 1.2rem;
   color: #F4B342;
 }
 
@@ -70,6 +73,6 @@ header div a:last-child {
 }
 
 #checkout {
-  width: 3rem;
+  width: 5rem;
   height: auto;
 }

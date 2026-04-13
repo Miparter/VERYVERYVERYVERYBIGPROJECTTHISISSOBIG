@@ -32,7 +32,7 @@ body {
   overflow-x: hidden;
   background-color: #0D0D0D;
   color: #F4B342;
-  /* row-gap:2rem; */
+  row-gap:2rem;
   width:100%;
 }
 
@@ -154,7 +154,7 @@ header div a:last-child {
 
 #product-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 1.5rem;
 }
 

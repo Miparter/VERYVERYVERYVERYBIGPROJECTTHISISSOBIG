@@ -130,6 +130,7 @@ header div a:last-child {
   border: 0.2rem dotted red;
   font-family: Runey;
   font-size: 1.1rem;
+  overflow:hidden;
 }
 
 .review img {
@@ -214,4 +215,15 @@ footer {
     font-family: BigWiz;
     font-size: 1rem;
     color: #DE1A58;
+}
+
+
+#mobile-warning {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    #mobile-warning {
+        display: block;
+    }
 }

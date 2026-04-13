@@ -10,6 +10,15 @@
   font-family: Runey;
   src: url(assets/fonts/runescape_bold.ttf);
 }
+@font-face {
+  font-family: Fancy;
+  src: url(assets/fonts/JacquardaBastarda9-Regular.ttf);
+}
+
+
+html {
+  overflow-x: hidden;
+}
 
 *{
   box-sizing: border-box;
@@ -23,7 +32,7 @@ body {
   overflow-x: hidden;
   background-color: #0D0D0D;
   color: #F4B342;
-  row-gap:2rem;
+  /* row-gap:2rem; */
   width:100%;
 }
 
@@ -32,10 +41,12 @@ header {
   align-items: center;
   justify-content: space-between;
   border-bottom: 0.2rem solid #8F0177;
-  padding: 0.5rem 1rem;
+  padding: 0;
   background-color: #230255;
   position:sticky;
   top:0;
+  box-sizing: border-box;
+   width:100%;
 }
 
 #logo {
@@ -67,6 +78,7 @@ header div a:last-child {
   background-color: #360185;
   border-left: 0.2rem solid #8F0177;
   border-bottom: 0.2rem solid #8F0177;
+  max-width: 100vw
 }
 
 #myLinks a {
@@ -82,7 +94,7 @@ header div a:last-child {
   color: #DE1A58;
 }
 
-#checkout {
+#cartimg {
   width: 5rem;
   height: auto;
 }
@@ -199,5 +211,5 @@ header div a:last-child {
 footer {
   display:flex;
   justify-content: center;
-  border:0.1rem solid #F4B342;
+  font-family: Logo;
 }
